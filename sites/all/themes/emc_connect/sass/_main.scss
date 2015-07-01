@@ -1,0 +1,87 @@
+// Navbar
+#navbar {
+    background: $purple-900;
+    font-size: $font-size-large;
+    padding: 7px;
+    
+    a {
+        color: $purple-50;
+        
+        &:hover,
+        &:focus,
+        &.active {
+            background-color: $purple-800;
+        }
+
+        &.logo {
+            background-color: transparent;
+            padding-right: 5px;
+        }
+    }
+}
+
+// Containers
+h2 {
+    .page-career-center & {
+        margin-top: 0;
+    } 
+}
+
+.jumbotron {
+    background: $brown-50;
+}
+
+.main-container > .well {
+    background: transparent;
+    border: none;
+}
+
+// Regions
+.footer {
+    background-color: $purple-900;
+    color: $purple-50;
+    padding: $grid-gutter-width;
+    
+    a {
+        color: $purple-50;
+        
+        &:hover,
+        &:focus {
+            background: none;
+            text-decoration: underline;
+        }
+    } 
+}
+
+// Home
+.post {
+    border-bottom: solid 2px $purple-50;
+    padding-bottom: 50px;
+}
+
+.group-header,
+.field-type-image {
+    padding-bottom: 10px;
+}
+
+.field-name-submitted-by {
+    color: $grey-500;
+    
+    a {
+        color: $grey-600;
+    }
+}
+
+// Career Center
+// Formulaire de recherche
+.views-exposed-form {
+    background: $grey-50;
+}
+
+.field-name-field-job-logo-entreprise {
+   img {
+        width: 100%;
+        height: auto
+    } 
+}
+
