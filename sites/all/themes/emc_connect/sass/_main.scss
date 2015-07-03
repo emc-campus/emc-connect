@@ -1,4 +1,7 @@
-// Navbar
+/********************
+** Navbar
+********************/
+
 #navbar {
     background: $purple-900;
     font-size: $font-size-large;
@@ -20,7 +23,11 @@
     }
 }
 
-// Containers
+
+/********************
+** Containers
+********************/
+
 h2 {
     .page-career-center & {
         margin-top: 0;
@@ -36,7 +43,27 @@ h2 {
     border: none;
 }
 
-// Regions
+// Classes
+.view-classes {
+  font-size: $font-size-large;
+  
+  a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    border-bottom: 1px solid $purple-50;
+    
+    &:hover {
+      background: $purple-50;
+    }
+  }
+}
+
+/********************
+** Regions
+********************/
+
 .footer {
     background-color: $purple-900;
     color: $purple-50;
@@ -53,14 +80,18 @@ h2 {
     } 
 }
 
-// Home
+
+/********************
+** Home
+********************/
+
 .post {
     border-bottom: solid 2px $purple-50;
     padding-bottom: 50px;
 }
 
 .group-header,
-.field-type-image {
+.field-name-field-image {
     padding-bottom: 10px;
 }
 
@@ -72,7 +103,11 @@ h2 {
     }
 }
 
-// Career Center
+
+/********************
+** Career Center
+********************/
+
 // Formulaire de recherche
 .views-exposed-form {
     background: $grey-50;
@@ -85,3 +120,40 @@ h2 {
     } 
 }
 
+
+/********************
+** Masquerade
+********************/
+
+// Corrige les bugs d'affichage du module Masquerade qui n'est pas compatible avec le framework Bootstrap.
+// Ceci, en attendant de trouver une solution pour personnaliser, peut-être, le template de Masquerade.
+.block-masquerade {
+	.input-group-addon {
+		position: absolute;
+		top: -1000;
+		visibility: hidden;
+	}
+	
+	button {
+		margin-top: 10px;
+	}
+}
+
+
+/********************
+** Panels
+********************/
+
+.node-job-form {
+	input[type="checkbox"],
+	input[type="radio"] {
+		margin-left: 0;
+	}
+	
+	input[type="file"] {
+		&.form-control {
+			height: auto;
+			margin-bottom: 10px;
+		}
+	}
+}

@@ -125,6 +125,10 @@
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>
 
+		<?php if (!empty($title)): ?>
+      <h1 class="page-header"><?php print $title; ?></h1>
+    <?php endif; ?>
+			
     <section<?php print $content_column_class; ?>>
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
@@ -132,9 +136,7 @@
       <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
-      <?php if (!empty($title)): ?>
-        <h1 class="page-header"><?php print $title; ?></h1>
-      <?php endif; ?>
+			<?php // Ancien positionnement du h1 ?>
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>
       <?php if (!empty($tabs)): ?>
@@ -160,7 +162,23 @@
 
 <footer class="footer">
   <div class="container">
-    <?php print render($page['footer']); ?>
+    <div class="row">
+    	<div class="col-md-4">
+				<?php print render($page['footer_first']); ?>
+			</div>
+			
+			<?php if (!empty($page['footer_second'])): ?>
+    	<div class="col-md-4">
+				<?php print render($page['footer_second']); ?>
+			</div>
+			<?php endif; ?>
+			
+			<?php if (!empty($page['footer_third'])): ?>
+    	<div class="col-md-4">
+				<?php print render($page['footer_third']); ?>
+			</div>
+			<?php endif; ?>
+    </div>
   </div>
   
 </footer>

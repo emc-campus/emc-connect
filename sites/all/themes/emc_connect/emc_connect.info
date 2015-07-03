@@ -15,7 +15,9 @@ regions[help]           = 'Help'
 regions[content]        = 'Content'
 regions[sidebar_first]  = 'Primary'
 regions[sidebar_second] = 'Secondary'
-regions[footer]         = 'Footer'
+regions[footer_first]   = 'Footer primary'
+regions[footer_second]  = 'Footer second'
+regions[footer_third]   = 'Footer third'
 regions[page_top]       = 'Page top'
 regions[page_bottom]    = 'Page bottom'
 
@@ -63,3 +65,11 @@ stylesheets[all][] = css/style.css
 ; Method 2 uses BootstrapCDN, the only thing you might need to provide here
 ; is overrides to Bootstrap theme settings. Copy them here from the base theme
 ; to override.
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Panels
+;;;;;;;;;;;;;;;;;;;;;
+
+; Panels layouts. You can place multiple layouts under the "layouts" folder.
+plugins[panels][layouts] = layouts
